@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+body {
+  background-color: #161722;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50px 1fr 50px;
+      grid-template-columns: 50px 1fr 50px;
+  -ms-grid-rows: 300px auto;
+      grid-template-rows: 300px auto;
+}
+
+.header {
+  grid-column: span 3;
+  background-image: url(../images/bg-desktop-dark.jpg);
+}
+
+.header .header__content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 150px (0.5fr)[2] 150px;
+      grid-template-columns: 150px repeat(2, 0.5fr) 150px;
+  -ms-grid-rows: 150px 150px;
+      grid-template-rows: 150px 150px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+}
+
+.header .header__content__txt {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+}
+
+.header .header__content__icon {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3 / 4;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+}
+
+.header .header__content__tsk {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-column: 2 / 4;
+  -ms-grid-row: 2;
+  grid-row: 2 / 2;
+  z-index: 999;
+}
+
+.header .header__content__task__input {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-column: 2 / 4;
+  -ms-grid-row: 2;
+  grid-row: 2 / 2;
+  background-color: #25273c;
+  border: none;
+  padding: 1.5rem;
+  width: 32rem;
+}
+
+.task {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  background-color: #25273c;
+  width: 50%;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+/*# sourceMappingURL=style.css.map */

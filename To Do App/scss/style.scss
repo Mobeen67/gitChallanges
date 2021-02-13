@@ -1,0 +1,76 @@
+@import 'modules/base';
+
+body{
+    background-color: $dt-Dark-Blue;
+    display: grid;
+    grid-auto-columns: 50px 1fr 50px;
+    grid-template-rows: 300px auto;
+    color: $dt-lGrayish-Blue;
+    overflow: hidden;
+}
+
+    .header{
+        grid-column: span 3;
+        background-image: url(../images/bg-desktop-dark.jpg);
+        .header__content{
+           display: grid;
+           grid-auto-columns: 250px repeat(2,.5fr) 250px;
+           grid-template-rows: 150px 100px;
+           align-items: flex-end;
+           justify-items: center;
+           column-gap: 2em;
+        }
+        .header__content__txt{
+            grid-column: 1 / 3;
+            grid-row: 1 / 2;
+            font-family: $ff-s;
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+        }
+        .header__content__txt--lbtn
+        {
+            grid-column: 2 / 4;
+            grid-row: 1 / 2;
+            background: transparent;
+            border: none;
+            align-self: center;
+            margin-top: 5rem;
+            margin-left: 5rem;
+        }
+        
+        .header__content__tsk{
+            grid-column: 2 / 3;
+            grid-row: 2 / 2;
+            align-self: center;
+            justify-self: flex-start;
+            z-index: 999;
+            margin-right: 5rem;
+            border-radius: 50%;
+            color: $dt-Dark-Blue;
+        }
+        .header__content__task__input{
+            grid-column: 1 / 4;
+            grid-row: 2 / 2;
+            color: #fff;
+            background-color: $dt-Desaturated-Blue;
+            border: none;
+            padding: 1.5rem;
+            width: 36vw;
+            align-self: center;
+            border-radius: 5px;
+        }
+    }
+    .task{
+         grid-column: 2 / 3;
+         background-color: $dt-Desaturated-Blue;
+         width: 40vw;
+         justify-self: center;
+         align-self: center;
+         border-radius: 5px;
+         z-index: 999;
+         margin-top: -2rem;
+         .task__list{
+             list-style-type: none;
+             text-decoration: none;
+         }
+    }
