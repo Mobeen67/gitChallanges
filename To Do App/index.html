@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <script src="./js/main.js"></script>
     <title>ToDo-App</title>
 </head>
 <body>
@@ -25,17 +26,32 @@
     <!-- Main Starts -->
     <main class="task">
        <ul class="task__list">
-         <li class="task__list__items" v-for="task in task">
-             <label class="task__list__item__label">
-                 <input type="checkbox">
+         <li class="task__items" v-for="task in task">
+             <label class="task__label">
+                 <input type="checkbox" class="task__checkbox">
                  <span>{{task.name}}</span>
              </label>
 
              <span @click="RemoveItem(task)"
-             class="Remove--icon" title="Remove Task">
-            {{task.Remove}}</span>
-         </li>
+             class="task__Remove--icon" title="Remove Task">
+             <img src="./images/icon-cross.svg">
+            </li>
        </ul>
+       <div class="task__control">
+        <span class="task__control__count"><strong id="todoCount">0</strong> item left</span>
+        <ul class="task__filters">
+            <li>
+                <a class="task__selected" id="allWorks" onclick="changeClass(this)" href="#/">All</a>
+            </li>
+            <li>
+                <a href="#active" id="activedItems" onclick="changeClass(this)">Active</a>
+            </li>
+            <li>
+                <a href="#completed" id="completedTodos" onclick="changeClass(this)">Completed</a>
+            </li>
+        </ul>
+        <button class="task__clear-completed" id="btnClear">Clear completed</button>
+       </div>
     </main>
     <!-- Main Ends -->
 </body>

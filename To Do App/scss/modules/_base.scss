@@ -37,5 +37,6 @@ $dt-Grayish-Blue:hsl(237, 14%, 26%);
 
 
 // Primary
-$Bright-Blue: hsl(220, 98%, 61%);
-$Background: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+$bright-Blue: hsl(220, 98%, 61%);
+// $background: linear-gradient(to right,hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+$background:linear-gradient(to left, hsl(192, 100%, 67%) 50%, hsl(280, 87%, 65%) 50%);
