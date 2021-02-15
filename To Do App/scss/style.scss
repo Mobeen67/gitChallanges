@@ -21,7 +21,7 @@ input { outline: none; }
            align-items: flex-end;
            justify-items: center;
         }
-        .header__content__txt{
+        .header__txt{
             grid-column: 1 / 3;
             grid-row: 1 / 2;
             font-family: $ff-s;
@@ -30,7 +30,7 @@ input { outline: none; }
             margin-right: -2.5rem;
             font-weight: $fw-b;
         }
-        .header__content__txt--lbtn
+        .header__txt--lbtn
         {
             grid-column: 2 / 4;
             grid-row: 1 / 2;
@@ -40,7 +40,7 @@ input { outline: none; }
             margin-top: 5rem;
             margin-left: 4rem;
         }
-         .header__content__tsk {
+         .header__addtsk {
             grid-column: 2 / 4;
             grid-row: 2 / 2;
             width: 20px;
@@ -74,7 +74,7 @@ input { outline: none; }
               }
             }
           }
-          .header__content__task__input{
+          .header__task__input{
             grid-column: 1 / 4;
             grid-row: 2 / 2;
             color: $dt-lGrayish-Blue;
@@ -148,7 +148,6 @@ input { outline: none; }
           cursor: pointer;
         }
         .task__label{
-          display: none;
           cursor: pointer;
         }
         .task__Remove--icon{
