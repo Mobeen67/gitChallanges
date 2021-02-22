@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+      <div class="header__txt">
+        <h1 class="header__h1">Simple, traffic-based pricing</h1>
+        <h3 class="header__h3">Sign-up for our 30-day trial. No credit card required.</h3>
+      </div>
+    </header>
+    <main class="main">
+        <div class="main__page">
+        <span class="main__pageviews">pageviews</span>
+        <span class="main__price">
+            <span id="price">$16.00</span>
+            <span id="period">/ month</span>
+        </span>
+        </div>
+        <div class="main__slider">
+            <input type="range" min="1" max="5" value="3" id="Slide">
+        </div>
+        <div class="main__toggle">
+          <span>Monthly Billing</span>
+            <label class="main__switch">
+                <input type="checkbox" id="toggle" onclick="discount()">
+                <span class="slide round"></span>
+            </label>
+            Yearly Billing
+            <span class="main__discount">25%
+                <span class="hide">discount</span>
+            </span>
+        </div>
+        <div class="main__links">
+            <ul class="main__list">
+               <li class="main__items">Unlimited websites</li>
+               <li class="main__items">100% data ownership</li>
+               <li class="main__items">Email reports</li>
+            </ul>
+            <button>Start my trial</button>
+        </div>
+    </main>
+
+</body>
+</html>
