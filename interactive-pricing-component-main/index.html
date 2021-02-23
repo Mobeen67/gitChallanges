@@ -16,14 +16,17 @@
     </header>
     <main class="main">
         <div class="main__page">
-        <span class="main__pageviews">pageviews</span>
-        <span class="main__price">
-            <span id="price">$16.00</span>
-            <span id="period">/ month</span>
+        <div class="main__pageview">
+            <span id="pageview"></span>
+            <span class="main__pageviews">pageviews</span>
+        </div>
+            <span class="main__price">
+            <b class="main__dollar">$</b><span id="price">16.00</span> /
+            <span id="period">month</span>
         </span>
         </div>
         <div class="main__slider">
-            <input type="range" min="1" max="5" value="3" id="Slide">
+            <input type="range" min="1" max="5" value="3" id="slide">
         </div>
         <div class="main__toggle">
           <span>Monthly Billing</span>
@@ -45,6 +48,6 @@
             <button>Start my trial</button>
         </div>
     </main>
-
+    <script src="./js/main.js"></script>
 </body>
 </html>

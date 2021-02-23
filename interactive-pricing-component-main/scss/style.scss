@@ -15,14 +15,25 @@ body{
     background: url(/images/pattern-circles.svg) top center no-repeat;
     background-size: contain;
     height: 150px;
+    margin: 2.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     &__txt{
       font-family: $f-f;
+      margin-top: 2.5rem;
+    }
+     &__h1{
+      font-weight: $fw-b;
+      color: $Dark-Desaturated-Blue;
+      font-size: 2.5vw;
+      padding-left: 1.1rem;
     }
     &__h3{
       font-weight: $fw-l;
       color: $Grayish-Blue;
-      font-size: 1rem;
-      padding-left: 1.1rem;
+      font-size: 1.2vw;
     }
 }
 .main{
@@ -33,7 +44,7 @@ body{
     border-radius: .5rem;
     display: grid;
     grid-template-columns: repeat(2,auto);
-    grid-template-rows: repeat(3, 70px) ;
+    grid-template-rows: repeat(2, 70px) 90px;
     font-family: $f-f;
     &__page{
         margin: 3rem;
@@ -41,12 +52,23 @@ body{
         grid-row: 1 / 2;
         display: flex;
         justify-content: space-between;
+        color: $Grayish-Blue;
+    }
+   
+    &__dollar {
+       font-size: 2.7rem;
+       font-weight: $fw-b;
+       color: $Dark-Desaturated-Blue;
+    }
+    &__pageview {
+       margin-top: 1rem;
     }
     &__pageviews {
-        color: $Grayish-Blue;
+       text-transform: uppercase;   
+    }
+    #pageview{
         text-transform: uppercase;
         letter-spacing: .2rem;
-        margin-top: 1rem;
     }
     #period {
         color: $Grayish-Blue;
@@ -54,6 +76,7 @@ body{
     #price {
         font-size: 2.7rem;
         font-weight: $fw-b;
+        color: $Dark-Desaturated-Blue;
     }
     &__slider {
         margin: 3rem;
@@ -90,7 +113,7 @@ body{
       }
     }
   }
-    }
+}
     &__toggle {
        margin: 3rem;
        grid-column: 1 / 3;
@@ -102,10 +125,62 @@ body{
        font-size: 0.85em;
     }
     &__switch {
-       width: 38px;
-       height: 10px;
-       margin: 0 15px;
-  cursor: pointer;
+      position: relative;
+      width: 38px;
+      height: 20px;
+      margin: 0 15px;
+ 
+      .slide {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $Light-Grayish-Blue;
+        transition: 0.2s;
+        &:hover {
+          background-color: $Soft-Cyan;
+        }
+
+        &:before {
+          position: absolute;
+          content: "";
+          height: 14px;
+          width: 14px;
+          left: 3px;
+          bottom: 3px;
+          background-color: white;
+          -webkit-transition: 0.4s;
+          transition: 0.4s;
+        }
+
+        &.round {
+          border-radius: 34px;
+        }
+
+        &.round:before {
+          border-radius: 50%;
+        }
+      }
+
+      input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+      input:checked + .slide {
+        background-color: $Strong-Cyan;
+      }
+
+      input:focus + .slide {
+        box-shadow: 0 0 1px $Strong-Cyan;
+      }
+
+      input:checked + .slide:before {
+        transform: translateX(18px);
+      }
+
     }
     &__discount {
        background-color: $Light-Grayish;
@@ -115,6 +190,7 @@ body{
        padding: 1px 8px;
        margin-left: .5rem;
     }
+
     &__links {
       padding: 20px 40px 20px 20px;
       grid-column: 1 / 3;
@@ -133,11 +209,81 @@ body{
       list-style-image: url(/images/icon-check.svg);
     }
     button{
+      padding: 0;
         border: none;
+        background: none;
         background-color: $Dark-Desaturated-Blue;
-        color: $Very-Pale-Blue;
+        color: $Pale-Blue;
         border-radius: 30px;
         padding: 15px 50px;
         cursor: pointer;
-    }
+        transition: all 0.2s;
+        outline: none;
+        &:hover {
+          color: $White;
+        }
+      }
 }
+ @media (max-width: 700px) {
+    .header{
+      &__txt{
+      margin-top: 3rem;
+    }
+     &__h1{
+        font-size: 1.3rem;
+     }
+     &__h3{
+       font-size: 0.9rem;
+       width: 55vw;
+       margin-left: 15vw;
+     }
+  }
+   .main {
+     margin: 1rem 3rem;
+   }
+   .main__pageviews {
+     font-size: 0.9rem;
+   }
+   .main__page{
+         display: flex;
+         flex-direction: column;
+         line-height: 2.5rem;
+         text-align: center;
+         margin-top: -0rem;
+       }
+       .main__price {
+        display: flex;
+        flex-direction: row;
+       }
+        #price {
+        font-size: 2.3rem;
+        font-weight: $fw-b;
+        color: $Dark-Desaturated-Blue;
+    }
+     .main__dollar {
+       font-size: 2.3rem;
+     }
+     .main__toggle{
+        margin: 1rem;
+        font-size: 0.75em;
+     }
+     .main__links  {
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+      }
+      .main__discount {
+        text-align: center;
+      }
+      .main__slider {
+          margin:3rem 1rem;
+      }
+      .hide{
+        display: none;
+      }
+       button{
+         width: 12rem;
+         height: 3rem;
+         font-size: 0.9rem;
+      }
+  } 
